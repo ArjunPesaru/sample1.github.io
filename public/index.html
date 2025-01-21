@@ -10,32 +10,23 @@
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
   <title>S0umyajit | Portfolio</title>
   <meta name="description" content="Self Developed personal website build with React.js">
+  # Train KNN with distance-weighted neighbors
+knn_model = CustomKNN(neighbors=3)
+knn_model.train(X_train_20ng, y_train_20ng)  # Changed from features_train_20ng, labels_train_20ng
 
+# Predict and evaluate
+train_predictions_20ng = knn_model.classify(X_train_20ng[:1000])  # Changed from features_train_20ng
+val_predictions_20ng = knn_model.classify(X_validation_20ng[:1000])  # Changed from features_val_20ng
+
+# Print accuracy
+print("Training Accuracy (20 Newsgroups):", accuracy_score(y_train_20ng[:1000], train_predictions_20ng))  # Changed from labels_train_20ng
+print("Validation Accuracy (20 Newsgroups):", accuracy_score(y_validation_20ng[:1000], val_predictions_20ng))  # Changed from labels_val_20ng
   <!-- Google / Search Engine Tags -->
   <meta itemprop="name" content="S0umyajit | Portfolio">
   <meta itemprop="description" content="Self Developed personal website build with React.js">
   <meta itemprop="image"
     content="https://raw.githubusercontent.com/soumyajit4419/Portfolio/master/Images/readme-img.png?token=AK7VCIF5RYEUZZAURELPTAC76U6AK">
 
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="https://soumyajit.vercel.app">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="S0umyajit | Portfolio">
-  <meta property="og:description" content="Self Developed personal website build with React.js">
-  <meta property="og:image"
-    content="https://raw.githubusercontent.com/soumyajit4419/Portfolio/master/Images/readme-img.png?token=AK7VCIF5RYEUZZAURELPTAC76U6AK">
-
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="S0umyajit | Portfolio">
-  <meta name="twitter:description" content="Self Developed personal website build with React.js">
-  <meta name="twitter:image"
-    content="https://raw.githubusercontent.com/soumyajit4419/Portfolio/master/Images/readme-img.png?token=AK7VCIF5RYEUZZAURELPTAC76U6AK">
-</head>
-
-<body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-</body>
+  
 
 </html>
